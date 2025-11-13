@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>首頁 - WELCOME TO MY PROFILE</title>
+    <link rel="stylesheet" href="styles.css"> 
+    
+    <style>
+        /* 1. 首頁特有：背景色 */
+        body {
+            background-color: #f0f8ff; 
+        }
+
+        /* 2. 首頁特有：置中邏輯 (使用絕對定位+變形) */
+        .content-wrapper {
+            /* 覆寫 styles.css 讓內容區絕對置中 */
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%); 
+            z-index: 1; 
+            
+            /* 垂直堆疊並置中 */
+            display: flex;
+            flex-direction: column; 
+            align-items: center; 
+            padding: 20px;
+        }
+
+        /* 3. 標題與 GIF 樣式 (保留在內部，以供您快速調整) */
+        h1 {
+            font-family: 'Arial', sans-serif;
+            color: #3498db; 
+            padding: 10px 30px; 
+            border: 3px solid #3498db; 
+            border-radius: 10px;
+            text-transform: uppercase; 
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            background-color: white;
+            margin-bottom: 20px; 
+        }
+        
+        .welcome-gif {
+            max-width: 1000px; 
+            height: auto;
+            border-radius: 10px;
+        }
+    </style>
+    
+</head>
+<body>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">首頁</a></li>
+            <li><a href="about.html">關於我</a></li>
+            <li><a href="portfolio.html">作品集</a></li>
+            <li><a href="blog.html">部落格</a></li>
+            <li><a href="contact.html">聯繫我</a></li>
+        </ul>
+    </nav>
+
+    <div class="content-wrapper">
+        
+        <h1>WELCOME TO MY PROFILE</h1>
+        
+        <img src="my-animation.gif" alt="歡迎動畫" class="welcome-gif">
+        
+    </div>
+    
+</body>
+</html>
